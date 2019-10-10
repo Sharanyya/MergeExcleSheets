@@ -1,0 +1,16 @@
+import pandas as pd
+
+e1='excel1.xlsx'
+e2='excel2.xlsx'
+
+df1=pd.read_excle(e1)
+df2=pd.read_excle(e2)
+
+values1=df1['S.NO','Name','Groupno']
+values2=df2['S.NO','Name','Groupno']
+
+dataframes=[values1,values2]
+
+join=pd.concat(dataframes)
+
+join.to_excle("output.xlsx")
